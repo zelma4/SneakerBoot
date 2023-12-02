@@ -1,0 +1,805 @@
+body{
+    display: flex;
+    justify-content: center;
+    background: #FEF4D1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    width: 95vw;
+    height: 4.5rem;
+    border-radius: 2.1875rem;
+    background: #C8B78B;
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.25);
+    flex-direction: row;
+    margin: 1rem 0px 5.5rem 0px;
+}
+
+.menu {
+  display: none;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.1875rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu li{
+    text-decoration: none;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  margin-right: 2rem;
+  height: 4px;
+  width: 30px;
+  transition: transform 800ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+.logo_icon_nav{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0.5rem;
+}
+
+.navbar_title{
+    display: none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.1875rem;
+    text-align: center;
+    margin-left: 2rem;
+}
+
+.basket_icon_nav{
+    width: 2.5rem;
+    padding: 5px;
+    background: none;
+    border: none;
+    margin-right: 0.5rem;
+}
+
+.profile_icon_nav{
+    width: 2.5rem;
+    padding: 5px;
+    background: none;
+    border: none;
+}
+
+.left_items{
+    display: flex;
+    flex-direction: row;
+    width: 33%;
+    margin-left: 1.5rem;
+}
+
+.center_items{
+    display: flex;
+    flex-direction: row;
+    width: 33%;
+    justify-content: center;
+    
+}
+
+.right_items{
+    display: flex;
+    flex-direction: row;
+    width: 33%;
+    justify-content: flex-end;
+    margin-right: 1.5rem;
+}
+
+.category{
+    background: none;
+    border: none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+}
+
+.brend_box{
+    display: flex;
+    width: 85vw;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.40);
+    margin: 0px 0px 6rem 0px;
+}
+
+.img_back{
+    display: flex;
+    background: url('../img/newbalance_bilboard.svg') no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 336px;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_img_back{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.175rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 150);
+}
+
+.brends{
+    display: flex;
+    background: #D6C485;
+    justify-content: space-between;
+}
+
+.bigdesktop{
+    display: none ;
+}
+
+.logo{
+    display: flex;
+    width: 4.5rem;
+    mix-blend-mode: darken;
+    padding: 10px;
+}
+
+.adidas_bilboard{
+    display: flex;
+    width: 85vw;
+    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.40);
+    margin: 0px 0px 5.5rem 0px;
+    max-width: none;
+}
+
+.sellout_boxes{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85vw;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 0px 5.5rem 0px;
+}
+
+.add_to_cart{
+    background: #c6bc97;
+    border-radius: 15px;
+    border: 2px solid #8b856b;
+}
+
+.add_to_cart :hover{
+    background: #fcefbe;
+    border-radius: 15px;
+}
+
+.converse_box{
+    display: flex;
+    width: 20rem;
+    height: 27rem;
+    border-radius: 2.1875rem;
+    background: #D8CDA6;
+    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.40);
+    flex-direction: column;
+    align-items: center;
+}
+
+.nb574_box{
+    display: none;
+    width: 20rem;
+    height: 27rem;
+    border-radius: 2.1875rem;
+    background: #D8CDA6;
+    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.40);
+    flex-direction: column;
+    align-items: center;
+}
+
+.jordan_box{
+    display: flex;
+    width: 20rem;
+    height: 27rem;
+    border-radius: 2.1875rem;
+    background: #D8CDA6;
+    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.40);
+    flex-direction: column;
+    align-items: center;
+}
+
+.nb_box{
+    display: flex;
+    width: 20rem;
+    height: 27rem;
+    border-radius: 2.1875rem;
+    background: #D8CDA6;
+    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.40);
+    flex-direction: column;
+    align-items: center;
+}
+
+.sale_shoes{
+    display: flex;
+    width: 19rem;
+    height: 12rem;
+    border-radius: 0.0625rem;
+}
+
+.sale_shoe_nb{
+    display: flex;
+    width: 19rem;
+    height: 12rem;
+    border-radius: 0.0625rem;
+    mix-blend-mode: darken;
+}
+
+.sale_converse_shoes{
+    display: flex;
+    width: 19rem;
+    height: 12rem;
+    border-radius: 0.0625rem;
+    mix-blend-mode: darken;
+}
+
+.shoes_describe{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 10%;
+    letter-spacing: 0.15625rem;
+}
+
+.last_sale{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 10%;
+    letter-spacing: 0.125rem;
+    margin-right: 8rem;
+}
+
+.new_sale{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 10%;
+    letter-spacing: 0.15625rem;
+}
+
+.nike_bilboard{
+    display: flex;
+    width: 85vw;
+    height: 100%;
+    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.40);
+    margin: 0 0 5.5rem 0;
+}
+
+.describe_container{
+    width: 85vw;
+    background: #D6C89A;
+    box-shadow: 10px 10px 25px 0px rgba(0, 0, 0, 0.40);
+    color: #FFF;
+    margin: 0 0 5.5rem 0;
+}
+
+.describe_text{
+    display: flex;
+    flex-direction: column;
+    font-family: Inter;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    padding: 10px;
+    text-align: center;
+}
+
+p{
+    padding: 10px;
+    margin: 12px;
+}
+
+.contacts{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 85vw;
+    justify-content: space-between;
+    background: #CEBB9B;
+    box-shadow: 10px 0px 25px 0px rgba(0, 0, 0, 0.40);
+    color: #FFF;
+    font-family: Inter;
+    font-size: 2rem;
+    line-height: 100%; /* 2.74rem */
+    letter-spacing: 0.2rem;
+    margin: 0 0 5.5rem 0;
+}
+
+.contacts_container{
+    display: flex;
+}
+
+.phone{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem 1rem;
+}
+
+.email{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem 1rem;
+}
+
+.newbalance_bilboard{
+    display: flex;
+    width: 85vw;
+    justify-content: center;
+    box-shadow: 10px 0px 25px 0px rgba(0, 0, 0, 0.40);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5.5rem;
+}
+
+.card {
+  width: 50vw;
+  border: 6px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  position: relative;
+  background: #D6C89A;
+  box-shadow: 10px 0px 25px 0px rgba(0, 0, 0, 0.40);
+}
+
+.card h2 {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.card .row {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid: auto / auto auto;
+  grid-template-columns: repeat(auto-fit,minmax(40%, 1fr));
+  grid-gap: 30px;
+}
+
+.card .row .column {
+  position: relative;
+  width: 100%;
+  margin: 30px 20px 40px 0;
+  transition: 0.5s;
+}
+
+.card .row .form-group {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #ffffff;
+}
+
+.card .row .form-group input,
+.card .row .form-group textarea {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  font-size: 24px;
+  padding: 10px 0 10px 20px;
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+.card .row .form-group label {
+  line-height: 40px;
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0 0 0 30px;
+  display: block;
+  pointer-events: none;
+}
+
+.row .column:nth-child(6) {
+  margin-top: 64px;
+}
+
+.card .row .form-group input:focus,
+.card .row .form-group textarea:focus {
+  border: 5px solid #ffffff;
+  transition: all 0.5s;
+}
+
+.card .row input[type="submit"] {
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  height: 100%;
+  width: 50%;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 45px;
+  transition: all 0.4s;
+}
+
+.card .row input[type="submit"]:hover {
+  border: 5px solid rgba(255, 255, 255, 1);
+  color: #ffffff;
+  transition: all 0.4s;
+}
+
+footer{
+    display: flex;
+    background: #877F65;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+}
+
+.footer_container{
+   display: flex;
+   background: #877F65;
+   width: 85vw;
+   justify-content: space-around;
+}
+
+.title_footer{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.1875rem;
+}
+
+.subtitle_footer{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+h2{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h3{
+    color: #C3C3C3;
+    font-family: Inter;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.15625rem;
+}
+
+.terms_privacy_h3{
+    color: #C3C3C3;
+    font-family: Inter;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.15625rem;
+    word-spacing: 3rem;
+}
+
+.third_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.first_box{
+    display: flex;
+    flex-direction: column;
+}
+
+.second_box{
+    display: flex;
+    flex-direction: column;
+    margin-right: 15rem;
+}
+
+.video_container{
+    width: 85vw;
+    padding: 0;
+    margin-bottom: 5.5rem;
+    
+}
+
+video{
+    width: 100%;
+    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.40);
+}
+
+video::-webkit-media-controls {
+    display: none;
+}
+
+video::-webkit-media-controls-start-playback-button {
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+
+    .logo_icon_nav{
+        width: 3.5rem;
+        height: 3.5rem;
+        margin: 0.8rem;
+    }
+
+    .navbar{
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .navbar_title{
+        display: block;
+    }
+
+    .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 6rem;
+    right: 4%;
+    display: flex;
+    flex-direction: column;
+    width: calc(95vw - 1em);
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 800ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #fff3f3;
+    border-radius: 15px;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 800ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color:#9b8e6c;
+    border-radius: 1px;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #ffffff;
+  }
+    
+    .basket_icon_nav{
+        width: 2.5rem;
+        padding: 5px;
+        background: none;
+        border: none;
+        margin-right: 0.5rem;
+    }
+
+    .profile_icon_nav{
+        width: 2.5rem;
+        padding: 5px;
+        background: none;
+        border: none;
+    }
+    
+    .left_items{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        margin-left: 1rem;
+    }
+    
+    .center_items{
+        display: none;
+    }
+
+    .brends{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sellout_boxes{
+        flex-direction: column;
+        align-content:center;
+        flex-wrap: wrap;
+    }
+
+    .contacts{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .right_items{
+        display: none;
+    }
+    
+    .nb_box{
+        display: none;
+    }
+
+    .footer_container{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+    }
+
+    .second_box{
+        margin-right: 0;
+        flex-direction: column-reverse;
+    }
+
+    .logo{
+        width: 3.5rem;
+        padding: 5px;
+    }
+
+    .converse_box{
+        margin-bottom: 5.5rem;
+    }
+
+    .email{
+        margin-bottom: 1rem;
+    }
+
+    .phone{
+        margin-top: 1rem;
+    }
+
+    .footer_container{
+        margin: 1rem 1rem;
+    }
+}
+    
+
+@media screen and (min-width: 2100px){
+
+    .nb574_box{
+        display: flex;
+    }
+
+    .logo{
+        width: 5.5rem;
+    }
+
+    .bigdesktop{
+        display: block ;
+    }
+
+}
+
+@media screen and (max-width: 1129px) and (min-width: 768px) {
+
+    .sellout_boxes{
+        justify-content: space-around;
+    }
+
+    .nb_box{
+        margin-top: 2rem;
+    }
+
+    .second_box{
+        margin-right: 8rem;
+    }
+    
+}
