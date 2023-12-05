@@ -233,14 +233,16 @@ body{
 }
 
 .add_to_cart{
-    background: #c6bc97;
+    background-color: #c6bc97;
     border-radius: 15px;
     border: 2px solid #8b856b;
+    width: 125px;
+    height: 65px;
+    cursor: pointer;
 }
 
-.add_to_cart :hover{
-    background: #fcefbe;
-    border-radius: 15px;
+.add_to_cart:hover{
+    background-color: #fcefbe;
 }
 
 .converse_box{
